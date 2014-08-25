@@ -1,47 +1,52 @@
 ---
 layout: default
-title: "Team Passion Hungary"
+title: "Kir-Dev blog"
 landing: true
 ---
+
 {% for post in paginator.posts %}
-<div class="post">
-<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-<p class="meta">
-<span class="date">{{ post.date | date: site.date_format }}</span>
-|
-<span class="author">
-{% if post.idp %}
-írta: <a href="https://profile.sch.bme.hu/profile/show/uid/{{post.idp}}">{{ post.author }}</a>
-{% else %}
-írta: <a href="https://profile.sch.bme.hu/profile/show/uid/{{post.author}}">{{ post.author }}</a>
-{% endif %}
-</span>
-</p>
-<div class="content">
-{{ post.excerpt }}
-</div>
-<div><a href="{{ post.url }}">Olvasd tovább &raquo;</a></div>
-<div class="custom-post-share-buttons">
-<a href="https://www.facebook.com/sharer.php?u={{site.url}}{{post.url}}" target="_blank">
-Facebook</a>
-<a href="https://twitter.com/share?text={{post.title}}&amp;url={{site.url}}{{post.url}}" target="_blank">
-Twitter</a>
-<a href="https://plus.google.com/share?url={{site.url}}{{post.url}}" target="_blank">Google+</a>
-</div>
-</div>
+    <div class="post">
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        <p class="meta">
+            <span class="date">{{ post.date | date: site.date_format }}</span>
+            |
+            <span class="author">
+                {% if post.idp %}
+                írta: <a href="https://profile.sch.bme.hu/profile/show/uid/{{post.idp}}">{{ post.author }}</a>
+                {% else %}
+                írta: <a href="https://profile.sch.bme.hu/profile/show/uid/{{post.author}}">{{ post.author }}</a>
+                {% endif %}
+            </span>
+        </p>
+        <div class="content">
+            {{ post.excerpt }}
+        </div>
+
+        <div><a href="{{ post.url }}">Olvasd tovább &raquo;</a></div>
+
+        <div class="custom-post-share-buttons">
+            <a href="https://www.facebook.com/sharer.php?u={{site.url}}{{post.url}}" target="_blank">
+          Facebook</a>
+            <a href="https://twitter.com/share?text={{post.title}}&amp;url={{site.url}}{{post.url}}" target="_blank">
+          Twitter</a>
+            <a href="https://plus.google.com/share?url={{site.url}}{{post.url}}" target="_blank">Google+</a>
+        </div>
+    </div>
 {% endfor %}
+
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
-{% if paginator.previous_page %}
-<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="left">&laquo; Előző</a>
-{% else %}
-<span class="left">&laquo; Előző</span>
-{% endif %}
-{% if paginator.next_page %}
-<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="right">Következő &raquo;</a>
-{% else %}
-<span class="right">Következő &raquo;</span>
-{% endif %}
-<div class="clear"></div>
+    {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="left">&laquo; Előző</a>
+    {% else %}
+        <span class="left">&laquo; Előző</span>
+    {% endif %}
+
+    {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="right">Következő &raquo;</a>
+    {% else %}
+        <span class="right">Következő &raquo;</span>
+    {% endif %}
+    <div class="clear"></div>
 </div>
 {% endif %}

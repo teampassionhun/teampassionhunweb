@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title>Team Passion</title>
+    <link href="/atom.xml" rel="self"/>
+    <link href="/"/>
+    <updated>2014-08-25T19:39:04+02:00</updated>
+    <id></id>
+    <author>
+        <name>Kir-Dev</name>
+        <email>kir-dev@sch.bme.hu</email>
+    </author>
+
+    
+
+</feed>
