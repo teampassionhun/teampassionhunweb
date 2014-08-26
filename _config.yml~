@@ -1,0 +1,14 @@
+name: "Team Passion"
+url: http://kir-dev.sch.bme.hu
+markdown: redcarpet
+pygments: true
+permalink: pretty
+paginate: 6
+timezone: Europe/Budapest
+date_format: "%Y.%m.%d."
+future: false
+extensions:
+- footnotes
+- autolink
+- strikethrough
+- no_intra_emphasis
